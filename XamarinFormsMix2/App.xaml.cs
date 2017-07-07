@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using XamarinFormsMix2.Views.TabbedPages;
 
 namespace XamarinFormsMix2
 {
@@ -8,7 +9,15 @@ namespace XamarinFormsMix2
         {
             InitializeComponent();
 
-            MainPage = new XamarinFormsMix2Page();
+            MainPage = new TabbedPage
+            {
+                Children =
+                {
+                    new Page1(),
+                    new Page2()
+                }
+
+            };
         }
 
         protected override void OnStart()
